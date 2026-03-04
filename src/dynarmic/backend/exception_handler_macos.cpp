@@ -136,7 +136,6 @@ kern_return_t MachHandler::HandleRequest(x86_thread_state64_t* ts) {
 
     const auto iter = FindCodeBlockInfo(ts->__rip);
     if (iter == code_block_infos.end()) {
-        fmt::print(stderr, "Unhandled EXC_BAD_ACCESS at rip {:#016x}\n", ts->__rip);
         return KERN_FAILURE;
     }
 
@@ -154,7 +153,6 @@ kern_return_t MachHandler::HandleRequest(arm_thread_state64_t* ts) {
 
     const auto iter = FindCodeBlockInfo(ts->__pc);
     if (iter == code_block_infos.end()) {
-        fmt::print(stderr, "Unhandled EXC_BAD_ACCESS at pc {:#016x}\n", ts->__pc);
         return KERN_FAILURE;
     }
 
