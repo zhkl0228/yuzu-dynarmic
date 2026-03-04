@@ -117,7 +117,7 @@ void EmitIR<IR::Opcode::SM4AccessSubstitutionBox>(oaknut::CodeGenerator& code, E
     (void)code;
     (void)ctx;
     (void)inst;
-    ASSERT_FALSE("Unimplemented");
+    UNIMPLEMENTED();
 }
 
 template<>

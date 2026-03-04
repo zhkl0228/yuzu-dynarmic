@@ -638,7 +638,7 @@ void EmitIR<IR::Opcode::VectorEqual128>(oaknut::CodeGenerator& code, EmitContext
     (void)code;
     (void)ctx;
     (void)inst;
-    ASSERT_FALSE("Unimplemented");
+    UNIMPLEMENTED();
 }
 
 template<>
@@ -864,10 +864,10 @@ void EmitIR<IR::Opcode::VectorMaxS32>(oaknut::CodeGenerator& code, EmitContext& 
 
 template<>
 void EmitIR<IR::Opcode::VectorMaxS64>(oaknut::CodeGenerator& code, EmitContext& ctx, IR::Inst* inst) {
-    (void)code;
-    (void)ctx;
-    (void)inst;
-    ASSERT_FALSE("Unimplemented");
+    EmitThreeOp(code, ctx, inst, [&](auto& Qresult, auto& Qa, auto& Qb) {
+        code.CMGT(Qresult->D2(), Qa->D2(), Qb->D2());
+        code.BSL(Qresult->B16(), Qa->B16(), Qb->B16());
+    });
 }
 
 template<>
@@ -887,10 +887,10 @@ void EmitIR<IR::Opcode::VectorMaxU32>(oaknut::CodeGenerator& code, EmitContext& 
 
 template<>
 void EmitIR<IR::Opcode::VectorMaxU64>(oaknut::CodeGenerator& code, EmitContext& ctx, IR::Inst* inst) {
-    (void)code;
-    (void)ctx;
-    (void)inst;
-    ASSERT_FALSE("Unimplemented");
+    EmitThreeOp(code, ctx, inst, [&](auto& Qresult, auto& Qa, auto& Qb) {
+        code.CMHI(Qresult->D2(), Qa->D2(), Qb->D2());
+        code.BSL(Qresult->B16(), Qa->B16(), Qb->B16());
+    });
 }
 
 template<>
@@ -910,10 +910,10 @@ void EmitIR<IR::Opcode::VectorMinS32>(oaknut::CodeGenerator& code, EmitContext& 
 
 template<>
 void EmitIR<IR::Opcode::VectorMinS64>(oaknut::CodeGenerator& code, EmitContext& ctx, IR::Inst* inst) {
-    (void)code;
-    (void)ctx;
-    (void)inst;
-    ASSERT_FALSE("Unimplemented");
+    EmitThreeOp(code, ctx, inst, [&](auto& Qresult, auto& Qa, auto& Qb) {
+        code.CMGT(Qresult->D2(), Qa->D2(), Qb->D2());
+        code.BSL(Qresult->B16(), Qb->B16(), Qa->B16());
+    });
 }
 
 template<>
@@ -933,10 +933,10 @@ void EmitIR<IR::Opcode::VectorMinU32>(oaknut::CodeGenerator& code, EmitContext& 
 
 template<>
 void EmitIR<IR::Opcode::VectorMinU64>(oaknut::CodeGenerator& code, EmitContext& ctx, IR::Inst* inst) {
-    (void)code;
-    (void)ctx;
-    (void)inst;
-    ASSERT_FALSE("Unimplemented");
+    EmitThreeOp(code, ctx, inst, [&](auto& Qresult, auto& Qa, auto& Qb) {
+        code.CMHI(Qresult->D2(), Qa->D2(), Qb->D2());
+        code.BSL(Qresult->B16(), Qb->B16(), Qa->B16());
+    });
 }
 
 template<>
@@ -1383,7 +1383,7 @@ void EmitIR<IR::Opcode::VectorSignExtend64>(oaknut::CodeGenerator& code, EmitCon
     (void)code;
     (void)ctx;
     (void)inst;
-    ASSERT_FALSE("Unimplemented");
+    UNIMPLEMENTED();
 }
 
 template<>
@@ -1406,7 +1406,7 @@ void EmitIR<IR::Opcode::VectorSignedMultiply16>(oaknut::CodeGenerator& code, Emi
     (void)code;
     (void)ctx;
     (void)inst;
-    ASSERT_FALSE("Unimplemented");
+    UNIMPLEMENTED();
 }
 
 template<>
@@ -1414,7 +1414,7 @@ void EmitIR<IR::Opcode::VectorSignedMultiply32>(oaknut::CodeGenerator& code, Emi
     (void)code;
     (void)ctx;
     (void)inst;
-    ASSERT_FALSE("Unimplemented");
+    UNIMPLEMENTED();
 }
 
 template<>
@@ -1778,7 +1778,7 @@ void EmitIR<IR::Opcode::VectorUnsignedMultiply16>(oaknut::CodeGenerator& code, E
     (void)code;
     (void)ctx;
     (void)inst;
-    ASSERT_FALSE("Unimplemented");
+    UNIMPLEMENTED();
 }
 
 template<>
@@ -1786,7 +1786,7 @@ void EmitIR<IR::Opcode::VectorUnsignedMultiply32>(oaknut::CodeGenerator& code, E
     (void)code;
     (void)ctx;
     (void)inst;
-    ASSERT_FALSE("Unimplemented");
+    UNIMPLEMENTED();
 }
 
 template<>

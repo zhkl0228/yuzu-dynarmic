@@ -123,7 +123,7 @@ static void EmitToFixed(oaknut::CodeGenerator& code, EmitContext& ctx, IR::Inst*
                 code.FCVTAS(Rto, Vfrom);
                 break;
             case FP::RoundingMode::ToOdd:
-                ASSERT_FALSE("Unimplemented");
+                UNIMPLEMENTED();
                 break;
             default:
                 ASSERT_FALSE("Invalid RoundingMode");
@@ -147,7 +147,7 @@ static void EmitToFixed(oaknut::CodeGenerator& code, EmitContext& ctx, IR::Inst*
                 code.FCVTAU(Rto, Vfrom);
                 break;
             case FP::RoundingMode::ToOdd:
-                ASSERT_FALSE("Unimplemented");
+                UNIMPLEMENTED();
                 break;
             default:
                 ASSERT_FALSE("Invalid RoundingMode");
@@ -188,7 +188,7 @@ void EmitIR<IR::Opcode::FPAbs16>(oaknut::CodeGenerator& code, EmitContext& ctx, 
     (void)code;
     (void)ctx;
     (void)inst;
-    ASSERT_FALSE("Unimplemented");
+    UNIMPLEMENTED();
 }
 
 template<>
@@ -315,7 +315,7 @@ void EmitIR<IR::Opcode::FPMulAdd16>(oaknut::CodeGenerator& code, EmitContext& ct
     (void)code;
     (void)ctx;
     (void)inst;
-    ASSERT_FALSE("Unimplemented");
+    UNIMPLEMENTED();
 }
 
 template<>
@@ -333,7 +333,7 @@ void EmitIR<IR::Opcode::FPMulSub16>(oaknut::CodeGenerator& code, EmitContext& ct
     (void)code;
     (void)ctx;
     (void)inst;
-    ASSERT_FALSE("Unimplemented");
+    UNIMPLEMENTED();
 }
 
 template<>
@@ -361,7 +361,7 @@ void EmitIR<IR::Opcode::FPNeg16>(oaknut::CodeGenerator& code, EmitContext& ctx, 
     (void)code;
     (void)ctx;
     (void)inst;
-    ASSERT_FALSE("Unimplemented");
+    UNIMPLEMENTED();
 }
 
 template<>
@@ -379,7 +379,7 @@ void EmitIR<IR::Opcode::FPRecipEstimate16>(oaknut::CodeGenerator& code, EmitCont
     (void)code;
     (void)ctx;
     (void)inst;
-    ASSERT_FALSE("Unimplemented");
+    UNIMPLEMENTED();
 }
 
 template<>
@@ -397,7 +397,7 @@ void EmitIR<IR::Opcode::FPRecipExponent16>(oaknut::CodeGenerator& code, EmitCont
     (void)code;
     (void)ctx;
     (void)inst;
-    ASSERT_FALSE("Unimplemented");
+    UNIMPLEMENTED();
 }
 
 template<>
@@ -415,7 +415,7 @@ void EmitIR<IR::Opcode::FPRecipStepFused16>(oaknut::CodeGenerator& code, EmitCon
     (void)code;
     (void)ctx;
     (void)inst;
-    ASSERT_FALSE("Unimplemented");
+    UNIMPLEMENTED();
 }
 
 template<>
@@ -433,7 +433,7 @@ void EmitIR<IR::Opcode::FPRoundInt16>(oaknut::CodeGenerator& code, EmitContext& 
     (void)code;
     (void)ctx;
     (void)inst;
-    ASSERT_FALSE("Unimplemented");
+    UNIMPLEMENTED();
 }
 
 template<>
@@ -515,7 +515,7 @@ void EmitIR<IR::Opcode::FPRSqrtEstimate16>(oaknut::CodeGenerator& code, EmitCont
     (void)code;
     (void)ctx;
     (void)inst;
-    ASSERT_FALSE("Unimplemented");
+    UNIMPLEMENTED();
 }
 
 template<>
@@ -533,7 +533,7 @@ void EmitIR<IR::Opcode::FPRSqrtStepFused16>(oaknut::CodeGenerator& code, EmitCon
     (void)code;
     (void)ctx;
     (void)inst;
-    ASSERT_FALSE("Unimplemented");
+    UNIMPLEMENTED();
 }
 
 template<>
@@ -647,7 +647,7 @@ void EmitIR<IR::Opcode::FPHalfToFixedS16>(oaknut::CodeGenerator& code, EmitConte
     (void)code;
     (void)ctx;
     (void)inst;
-    ASSERT_FALSE("Unimplemented");
+    UNIMPLEMENTED();
 }
 
 template<>
@@ -655,7 +655,7 @@ void EmitIR<IR::Opcode::FPHalfToFixedS32>(oaknut::CodeGenerator& code, EmitConte
     (void)code;
     (void)ctx;
     (void)inst;
-    ASSERT_FALSE("Unimplemented");
+    UNIMPLEMENTED();
 }
 
 template<>
@@ -663,7 +663,7 @@ void EmitIR<IR::Opcode::FPHalfToFixedS64>(oaknut::CodeGenerator& code, EmitConte
     (void)code;
     (void)ctx;
     (void)inst;
-    ASSERT_FALSE("Unimplemented");
+    UNIMPLEMENTED();
 }
 
 template<>
@@ -671,7 +671,7 @@ void EmitIR<IR::Opcode::FPHalfToFixedU16>(oaknut::CodeGenerator& code, EmitConte
     (void)code;
     (void)ctx;
     (void)inst;
-    ASSERT_FALSE("Unimplemented");
+    UNIMPLEMENTED();
 }
 
 template<>
@@ -679,7 +679,7 @@ void EmitIR<IR::Opcode::FPHalfToFixedU32>(oaknut::CodeGenerator& code, EmitConte
     (void)code;
     (void)ctx;
     (void)inst;
-    ASSERT_FALSE("Unimplemented");
+    UNIMPLEMENTED();
 }
 
 template<>
@@ -687,7 +687,7 @@ void EmitIR<IR::Opcode::FPHalfToFixedU64>(oaknut::CodeGenerator& code, EmitConte
     (void)code;
     (void)ctx;
     (void)inst;
-    ASSERT_FALSE("Unimplemented");
+    UNIMPLEMENTED();
 }
 
 template<>
