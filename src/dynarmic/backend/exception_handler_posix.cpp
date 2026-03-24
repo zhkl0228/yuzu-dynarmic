@@ -186,7 +186,6 @@ void SigHandler::SigAction(int sig, siginfo_t* info, void* raw_context) {
         }
     }
 
-    fmt::print(stderr, "Unhandled {} at rip {:#018x}\n", sig == SIGSEGV ? "SIGSEGV" : "SIGBUS", CTX_RIP);
 
 #elif defined(MCL_ARCHITECTURE_ARM64)
 
@@ -245,7 +244,6 @@ void SigHandler::SigAction(int sig, siginfo_t* info, void* raw_context) {
         }
     }
 
-    fmt::print(stderr, "Unhandled {} at pc {:#018x}\n", sig == SIGSEGV ? "SIGSEGV" : "SIGBUS", CTX_PC);
 
 #elif defined(MCL_ARCHITECTURE_RISCV)
 
